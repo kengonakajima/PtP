@@ -1,2 +1,7 @@
-# PtP
-Paste then Path
+# PtP : Paste then Path
+
+クリップボードにある画像を ~/.ptp/ に保存してそのパスをクリップボードにいれる。
+ターミナルエージェントの作業用。
+
+
+![./ss.png](画面写真)
