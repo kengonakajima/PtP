@@ -122,10 +122,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         // アプリアイコンを設定
-        if let symbolImage = NSImage(systemSymbolName: "doc.on.clipboard", accessibilityDescription: nil) {
-            let config = NSImage.SymbolConfiguration(pointSize: 128, weight: .regular)
-            let configured = symbolImage.withSymbolConfiguration(config)
-            NSApp.applicationIconImage = configured
+        if let resourcePath = Bundle.main.path(forResource: "ptp", ofType: "png"),
+           let iconImage = NSImage(contentsOfFile: resourcePath) {
+            NSApp.applicationIconImage = iconImage
         }
 
         // メニューバーを設定

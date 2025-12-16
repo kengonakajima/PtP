@@ -11,6 +11,10 @@ rm -rf "$APP_DIR"
 
 # .app バンドル構造を作成
 mkdir -p "${APP_DIR}/Contents/MacOS"
+mkdir -p "${APP_DIR}/Contents/Resources"
+
+# アイコンをコピー
+cp ptp.png "${APP_DIR}/Contents/Resources/"
 
 # コンパイル
 swiftc -o "${APP_DIR}/Contents/MacOS/${APP_NAME}" PtP.swift -framework AppKit
